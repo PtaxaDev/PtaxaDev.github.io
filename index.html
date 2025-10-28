@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spotlight - платформа для игр и развлечений">
+  <title>Spotlight - Игровая платформа</title>
+  <link rel="stylesheet" href="/src/styles/index.css">
+  <link rel="icon" type="image/webp" href="/public/assets/icons/favicon.webp">
+</head>
+<body>
+  <header role="banner">
+    <div class="left-header">
+      <div class="logo">
+        <img
+          class="logo-img"
+          src="/public/assets/icons/favicon.webp"
+          alt="Логотип Spotlight"
+          width="40"
+          height="40" />
+      </div>
+      <nav class="nav-panel" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#main" aria-current="page">Главная</a></li>
+          <li><a href="#news">Новости</a></li>
+          <li><a href="#new-games">Новинки</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right-header">
+      <button class="profile-btn" aria-label="Профиль пользователя">
+        <span class="nickname">NickName</span>
+      </button>
+      <div class="avatar">
+        <img
+          class="avatar-img"
+          src="/public/assets/icons/u-user.png"
+          alt="Аватар пользователя"
+          width="28"
+          height="28" />
+      </div> 
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="news" aria-label="Новости платформы">
+      <h2>Новости</h2>
+      <div id="news-list" role="list">
+        <!-- Новости будут загружены через JavaScript -->
+      </div>
+    </aside>
+
+    <main class="content" role="main">
+      <div class="categories">
+        
+        <!-- НОВЫЕ ИГРЫ -->
+        <section class="category-section" id="new-games" aria-labelledby="new-games-title">
+          <h3 id="new-games-title">Новые игры</h3>
+          <div class="cards" id="new-games-cards" role="list" aria-label="Список новых игр">
+            <!-- Карточки будут загружены через JavaScript -->
+          </div>
+        </section>
+
+        <!-- РЕКОМЕНДАЦИИ -->
+        <section class="category-section" id="recommendations" aria-labelledby="recommendations-title">
+          <h3 id="recommendations-title">Рекомендации</h3>
+          <div class="cards" id="recommendations-cards" role="list" aria-label="Рекомендованные игры">
+            <!-- Карточки будут загружены через JavaScript -->
+          </div>
+        </section>
+
+        <!-- ИГРАЛИ РАНЕЕ -->
+        <section class="category-section" id="played-before" aria-labelledby="played-before-title">
+          <h3 id="played-before-title">Играли ранее</h3>
+          <div class="cards" id="played-before-cards" role="list" aria-label="Игры, в которые вы играли ранее">
+            <!-- Карточки будут загружены через JavaScript -->
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <aside class="personal-news" aria-label="Персональные новости">
+      <h2>Персональные новости</h2>
+      <div id="personal-news-list" role="list">
+        <!-- Персональные новости будут загружены через JavaScript -->
+      </div>
+    </aside>
+  </div>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Spotlight. Все права защищены.</p>
+  </footer>
+  
+  <!-- Состояние загрузки -->
+  <div class="loading-state" aria-live="polite" aria-label="Загрузка контента">
+    <div class="loading-spinner" hidden>
+      <p>Загрузка игр и новостей...</p>
+    </div>
+  </div>
+
+  <script src="/src/app/index.js" type="module"></script>
+</body>
+</html>
