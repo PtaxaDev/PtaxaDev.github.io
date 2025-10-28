@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Витрина скриншотов</title>
+  <link rel="icon" type="image/png" href="\public\assets\icons\favicon.png">
+  <link rel="stylesheet" href="\src\pages\gallery\gallery.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="\public\assets\icons\favicon.png" alt="Логотип" width="40" height="40">
+      <span>About Me</span>
+    </div>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="\src\pages\gallery\gallery.html">Витрина скриншотов</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="category-selector">
+      <label for="category">Категория:</label>
+      <select id="category"></select>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+
+    <div id="loading" class="loading">Загрузка изображений...</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Datecher</p>
+  </footer>
+
+  <script src="\src\pages\gallery\gallery.js" type="module"></script>
+</body>
+</html>
