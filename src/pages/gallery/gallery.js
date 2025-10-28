@@ -5,28 +5,13 @@ const noImagesElement = document.getElementById('no-images');
 const endOfContentElement = document.getElementById('end-of-content');
 const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-// Категории с иконками
+// Категории (только названия)
 const categories = {
-  "ariral": {
-    name: "Ariral",
-    icon: "/assets/icons/ariral-icon.png"
-  },
-  "weapons": {
-    name: "Оружие",
-    icon: "/assets/icons/weapons-icon.png"
-  },
-  "vehicles": {
-    name: "Транспорт", 
-    icon: "/assets/icons/vehicles-icon.png"
-  },
-  "locations": {
-    name: "Локации",
-    icon: "/assets/icons/locations-icon.png"
-  },
-  "characters": {
-    name: "Персонажи",
-    icon: "/assets/icons/characters-icon.png"
-  }
+  "ariral": "Ariral",
+  "weapons": "Оружие",
+  "vehicles": "Транспорт", 
+  "locations": "Локации",
+  "characters": "Персонажи"
 };
 
 let currentCategory = null;
@@ -36,18 +21,15 @@ let isLoading = false;
 let hasMoreImages = true;
 let loadedImages = new Set();
 
-// Создание карточек категорий
+// Создание карточек категорий (только текст)
 function createCategoryCards() {
-  for (const [key, category] of Object.entries(categories)) {
+  for (const [key, categoryName] of Object.entries(categories)) {
     const card = document.createElement('div');
     card.className = 'category-card';
     card.setAttribute('data-category', key);
     
     card.innerHTML = `
-      <div class="category-image">
-        <img src="${category.icon}" alt="${category.name}">
-      </div>
-      <div class="category-name">${category.name}</div>
+      <div class="category-name">${categoryName}</div>
     `;
     
     card.addEventListener('click', () => selectCategory(key));
@@ -242,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   scrollToTopBtn.addEventListener('click', scrollToTop);
   
+  // Автовыбор первой категории
   setTimeout(() => {
     const firstCategory = Object.keys(categories)[0];
     selectCategory(firstCategory);
