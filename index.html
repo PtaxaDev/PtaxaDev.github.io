@@ -3,32 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="icon" type="image/png" href="\public\assets\icons\favicon.png">
+  <title>PtaxaDev | PyroByte Studio</title>
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="\public\assets\icons\favicon.png" alt="Логотип" width="40" height="40">
-      <span>About Me</span>
+      <img src="/assets/icons/favicon.png" alt="Логотип" width="40" height="40">
+      <span>PtaxaDev | PyroByte Studio</span>
     </div>
     <nav>
       <a href="index.html" class="active">About Me</a>
-      <a href="\src\pages\gallery\gallery.html">Витрина скриншотов</a>
+      <a href="/src/pages/gallery/gallery.html">Витрина скриншотов</a>
     </nav>
   </header>
 
   <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Привет, я PtaxaDev</h1>
+        <p class="subtitle">Full-stack разработчик & создатель игровых интерфейсов</p>
+        <div class="hero-badge">
+          <span>🚀 Создаю цифровые миры</span>
+        </div>
+      </div>
+    </section>
+
     <section class="about">
-      <h1>Обо мне</h1>
-      <p>Привет! Это мой личный сайт, где я делюсь своими проектами, идеями и скриншотами.</p>
-      <p>Я создаю сайты, ботов и игровые интерфейсы. Всё, что ты видишь — результат экспериментов с фронтендом и дизайном.</p>
+      <div class="container">
+        <h2>Обо мне</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-icon">💻</div>
+            <h3>Разработка</h3>
+            <p>Создаю сайты, ботов и игровые интерфейсы с акцентом на пользовательский опыт</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🎨</div>
+            <h3>Дизайн</h3>
+            <p>Экспериментирую с фронтендом и визуальным дизайном для создания уникальных проектов</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🚀</div>
+            <h3>Инновации</h3>
+            <p>Постоянно изучаю новые технологии и подходы в веб-разработке</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="links">
+      <div class="container">
+        <h2>Мои проекты и ссылки</h2>
+        <div class="links-grid" id="links-container">
+          <!-- Ссылки будут добавлены через JavaScript -->
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Datecher | Создан с ❤️ и кодом</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Datecher | Создан с ❤️ и кодом</p>
+      <div class="footer-links">
+        <span>PtaxaDev | PyroByte Studio</span>
+      </div>
+    </div>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
