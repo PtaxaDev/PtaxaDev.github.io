@@ -1,14 +1,14 @@
-/* Светлая тема по умолчанию (если у пользователя в системе светлая тема или нет предпочтений) */
+/* Светлая тема по умолчанию */
 :root {
   --bg-primary: #FFFFFF;      
   --bg-secondary: #F4F4F5;    
   --text-main: #18181B;       
   --text-muted: #71717A;      
-    --border-color: #ebebf05f;    
+  --border-color: #ebebf05f;    
   --hover-color: #27272A;   
 }
 
-/* Условие: если у пользователя в операционной системе включена ТЁМНАЯ тема */
+/* Тёмная тема через системные настройки ИЛИ через класс .dark */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-primary: #09090B;    
@@ -18,6 +18,21 @@
     --border-color: #ebebf05f;  
     --hover-color: #E4E4E7;   
   }
+}
+
+html.dark {
+  --bg-primary: #09090B;    
+  --bg-secondary: #18181B;  
+  --text-main: #FAFAFA;     
+  --text-muted: #A1A1AA;    
+  --border-color: #ebebf05f;  
+  --hover-color: #E4E4E7;   
+}
+
+/* Применение переменных */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
 }
 
 /* Базовые размеры шрифтов для заголовков */
