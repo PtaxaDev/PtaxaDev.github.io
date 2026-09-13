@@ -1,0 +1,46 @@
+/* Светлая тема по умолчанию (если у пользователя в системе светлая тема или нет предпочтений) */
+:root {
+  --bg-primary: #FFFFFF;      
+  --bg-secondary: #F4F4F5;    
+  --text-main: #18181B;       
+  --text-muted: #71717A;      
+    --border-color: #ebebf05f;    
+  --hover-color: #27272A;   
+}
+
+/* Условие: если у пользователя в операционной системе включена ТЁМНАЯ тема */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #09090B;    
+    --bg-secondary: #18181B;  
+    --text-main: #FAFAFA;     
+    --text-muted: #A1A1AA;    
+    --border-color: #ebebf05f;  
+    --hover-color: #E4E4E7;   
+  }
+}
+
+/* Базовые размеры шрифтов для заголовков */
+h1 {
+    font-size: 2.0rem;  /* Примерно 40px (главный заголовок) */
+    font-weight: 700;   /* Жирный */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.5rem;    /* Примерно 32px (разделы) */
+    font-weight: 600;   
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem;  /* Примерно 24px (подразделы) */
+    font-weight: 600;
+}
+
+/* Обычный текст */
+p {
+    font-size: 1.2rem;    /* 16px (базовый размер) */
+    font-weight: 400;
+    line-height: 1.5;
+}
