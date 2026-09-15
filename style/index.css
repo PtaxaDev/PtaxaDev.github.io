@@ -201,4 +201,13 @@ details[open] .faq__question::after {
     color: var(--text-muted);
     line-height: 1.6;
     font-size: 1rem;
+
+    display: grid;
+
+    & img {
+        max-width: 45%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
 }
